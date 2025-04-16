@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer de Meditação</title>
+    <link rel="stylesheet" href=".css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="meditation-app">
+        <h1 class="app-title">Timer de Meditação</h1>
+        
+        <!-- Display do Timer -->
+        <div class="timer-display">
+            <div class="time" id="time">05:00</div>
+            <div class="timer-controls">
+                <button id="start-pause" class="control-btn">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button id="reset" class="control-btn">
+                    <i class="fas fa-redo"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Controles do Timer -->
+        <div class="timer-settings">
+            <div class="setting">
+                <label for="minutes">Minutos</label>
+                <input type="number" id="minutes" min="1" max="60" value="5">
+            </div>
+            <div class="setting">
+                <label for="seconds">Segundos</label>
+                <input type="number" id="seconds" min="0" max="59" value="0">
+            </div>
+        </div>
+        
+        <!-- Sons Ambientes -->
+        <div class="sounds-section">
+            <h2>Sons de Fundo</h2>
+            <div class="sound-buttons">
+                <button class="sound-btn" data-sound="rain">
+                    <i class="fas fa-cloud-rain"></i>
+                    <span>Chuva</span>
+                </button>
+                <button class="sound-btn" data-sound="forest">
+                    <i class="fas fa-tree"></i>
+                    <span>Floresta</span>
+                </button>
+                <button class="sound-btn" data-sound="waves">
+                    <i class="fas fa-water"></i>
+                    <span>Ondas</span>
+                </button>
+                <button class="sound-btn" data-sound="fire">
+                    <i class="fas fa-fire"></i>
+                    <span>Fogueira</span>
+                </button>
+                <button class="sound-btn" data-sound="silence">
+                    <i class="fas fa-volume-mute"></i>
+                    <span>Silêncio</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Notificação de Finalização -->
+        <div class="notification" id="notification">
+            <p>Sessão concluída!</p>
+            <button id="close-notification">OK</button>
+        </div>
+    </div>
+
+    <!-- Elementos de Áudio (hidden) -->
+    <audio id="rain-sound" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    <audio id="forest-sound" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"></audio>
+    <audio id="waves-sound" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"></audio>
+    <audio id="fire-sound" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"></audio>
+
+    <script src=".js"></script>
+</body>
+</html>
